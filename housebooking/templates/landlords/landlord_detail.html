@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Landlord: {{ landlord }}</h1>
+
+  <p><strong>Landlord:</strong><a href="">{{ book.author }}</a></p>
+  <p><strong>Description:</strong> {{ house.description }}</p>
+  <p><strong>Address:</strong> {{ house.address }}</p>
+  <p><strong>City:</strong> {{ house.city_id }}</p>
+  <p><strong>State:</strong> {{ house.state_id }}</p>
+  <p><strong>Amenities:</strong> {{ house.amenities.all|join:", " }}</p>
+  <p><strong>Number of beds:</strong> {{ house.number_of_beds }}</p>
+  <p><strong>Number of bathrooms:</strong> {{ house.number_of_bath }}</p>
+  <p><strong>Pets allowed:</strong> {{ house.pet_allowed }}</p>
+  <p><strong>Smoking allowed:</strong> {{ house.smoking_allowed }}</p>
+  <p><strong>Description:</strong> {{ house.description }}</p>
+
+{% endblock %}

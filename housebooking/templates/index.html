@@ -1,0 +1,57 @@
+{% extends "base_generic.html" %}
+{% load static %}
+
+{% block content %}
+<div id="carousel-container">
+    <div>
+        <img src="{% static 'img/image1.jpg' %}" alt="Image 1">
+    </div>
+    <div>
+      <img src="{% static 'img/image2.jpg' %}" alt="Image 3">
+    </div>
+    <div>
+        <img src="{% static 'img/image3.jpg' %}" alt="Image 3">
+    </div>
+    <div>
+      <img src="{% static 'img/image4.jpg' %}" alt="Image 3">
+  </div>
+  <div>
+    <img src="{% static 'img/image5.jpg' %}" alt="Image 3">
+  </div>
+  <div>
+    <img src="{% static 'img/image6.jpg' %}" alt="Image 3">
+  </div>
+</div>
+
+<div class="home">
+  <h1> Welcome to House Booking </h1>
+  <p> Search, find, and rent your dream home from our trusted agents and landlords</p>
+  <h2> Get Started as</h2>
+</div>
+<div class="home-nav">
+  <div class="href">
+    <a href="{% url 'create-agent' %}">Agent</a>
+  </div>
+  <div class="href">
+    <a href="{% url 'create-landlord' %}">Landlord</a>
+  </div>
+  <div class="href">
+    <a href="{% url 'create-tenant' %}">Tenant</a>
+  </div>
+</div>
+<div class="home">
+  <h2> How It Works</h2>
+  <div class="home-users">
+    <h3> Tenant </h3>
+    <img src="{% static 'img/tenants.png' %}" alt="how it works - tenants">
+  </div>
+  <div class="home-users">
+    <h3> Agent</h3>
+    <img src="{% static 'img/agents.png' %}" alt="how it works - agents">
+  </div>
+  <div class="home-users">
+    <h3> Landlord </h3>
+    <img src="{% static 'img/landlords.png' %}" alt="how it works - landlords">
+  </div>
+</div>
+{% endblock %}

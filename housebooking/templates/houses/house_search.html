@@ -1,0 +1,46 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h2>Search houses</h2>
+
+    <form method="GET">
+        <div style="display: grid">
+        {% for field in filter.form %}
+            <div id="form-field-{{ forloop.counter0 }}">
+                {{ field.label_tag }}
+                {{ field }}
+            </div>
+        {% endfor %}
+        </div>
+        <button type="submit">Filter</button>
+    </form>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">City</th>
+                <th scope="col">State</th>
+                <th scope="col">Amenities</th>
+                <th scope="col">Number of beds</th>
+                <th scope="col">Pet allowed</th>
+                <th scope="col">Smoking allowed</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for house in filter.qs %}
+            <tr>
+                <th scope="row">{{ forloop.counter }}</th>
+                <td><a href="{{ house.get_absolute_url }}">{{ house.name }}</a></td>
+                <td>{{ house.city_id }}</td>
+                <td>{{ house.state_id }}</td>
+                <td>{% for amenity in house.amenities.all %}{{amenity}}{% endfor %}</td>
+                <td>{{ house.number_of_beds }}</td>
+                <td>{{ house.number_of_baths }}</td>
+                <td>{{ house.pet_allowed }}</td>
+                <td>{{ house.smoking_allowed }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

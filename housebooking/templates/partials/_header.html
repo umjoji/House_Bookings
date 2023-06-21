@@ -1,0 +1,26 @@
+<!-- Add code to load static content-->
+{% load static %}
+{% load custom_filters %}
+<header>
+    <div class="logo">
+        <img src="{% static 'img/logo.png' %}" />
+    </div>
+    <nav>
+        <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'search' %}">Search Houses</a></li>
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'create-house' %}">Add House</a></li>
+            {% else %}
+            <li><a href="{% url 'create-landlord' %}">Register</a></li>
+            {% endif %}
+            <li><a href="{% url 'about' %}">About Us</a></li>
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+            {% else %}
+            <li><a href="{% url 'login' %}">Login</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+</header>
+<br>

@@ -1,0 +1,53 @@
+{% extends "base_generic.html" %}
+{% load static %}
+
+{% block content %}
+
+<section class="about">
+    <div class="container">
+        <h2>Welcome to House Booking</h2>
+        <p>
+            At House Booking, we are dedicated to simplifying the process of finding and booking your dream house.
+            Our platform connects tenants, agents, and landlords in a seamless and efficient manner.
+        </p>
+        <p>
+            Whether you're looking for a cozy apartment, a spacious villa, or a trendy loft, we've got you covered.
+            Our extensive database of properties offers a wide range of options to suit every taste and budget.
+            With just a few clicks, you can explore listings, schedule viewings, and secure your new home.
+        </p>
+        <p>
+            Our team of experienced professionals is committed to providing exceptional service and support.
+            We strive to ensure a smooth and enjoyable experience for both tenants and property owners.
+            Customer satisfaction is our top priority, and we are constantly improving our platform to meet your needs.
+        </p>
+    </div>
+</section>
+
+<section class="team">
+    <div class="container">
+        <h2>Meet Our Team</h2>
+        <div class="team-members">
+            <div class="member">
+                <img src="{% static 'img/george.jpg' %}" alt="George">
+                <h3>Akanimoh George</h3>
+                <p>Fullstack Software Engineer</p>
+                <h5>Connect:</h5>
+                <div class="social-media">
+                    <a href="http://linkedin.com/in/akanimoh-george" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="http://github.com/umjoji" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="member">
+                <img src="{% static 'img/tessy.jpeg' %}" alt="Tessy">
+                <h3>Theresa James</h3>
+                <p>Fullstack Software Engineer</p>
+                <h5>Connect:</h5>
+                <div class="social-media">
+                    <a href="https://www.linkedin.com/tessyjames" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/TessyJames28" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
